@@ -17,6 +17,8 @@ const deployTimeLock: DeployFunction = async function (
         args: [MIN_DELAY, [], []],
         log: true,
     });
+    log("TimeLock deployed");
+    log("----------------------------------------------------");
 };
 
 export default deployTimeLock;

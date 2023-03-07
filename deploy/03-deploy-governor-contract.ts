@@ -27,6 +27,7 @@ const deployGovernorContract: DeployFunction = async function (
     });
 
     log("GovernorContract deployed");
+    log("----------------------------------------------------");
 };
 
 export default deployGovernorContract;

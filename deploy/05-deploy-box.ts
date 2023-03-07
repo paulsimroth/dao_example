@@ -22,6 +22,7 @@ const deployBox: DeployFunction = async function (
     const transferOwner = await boxContract.transferOwnership(timeLock.address);
     await transferOwner.wait(1);
     log("transfer completed");
+    log("----------------------------------------------------");
 };
 
 export default deployBox;
