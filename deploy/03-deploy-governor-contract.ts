@@ -9,11 +9,13 @@ const deployGovernorContract: DeployFunction = async function (
     const { deploy, log, get } = deployments;
     const { deployer } = await getNamedAccounts();
 
+    //GET Contracts
     const governanceToken = await get("GovernanceToken");
     const timeLock = await get("TimeLock");
 
-    log("deploying GovernorContract...");
+    log("03 - deploying GovernorContract...");
 
+    //GovernorContract deployment
     const governorContract = await deploy("GovernorContract", {
         from: deployer,
         args: [
@@ -26,7 +28,7 @@ const deployGovernorContract: DeployFunction = async function (
         log: true,
     });
 
-    log("GovernorContract deployed");
+    log("03 - GovernorContract deployed");
     log("----------------------------------------------------");
 };
 

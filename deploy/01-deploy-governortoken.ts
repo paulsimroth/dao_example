@@ -8,9 +8,11 @@ const deployGovernanceToken: DeployFunction = async function (
     const { getNamedAccounts, deployments, network } = hre;
     const { deploy, log } = deployments;
     const { deployer } = await getNamedAccounts();
+    
+    log("----------------------------------------------------");
+    log("01 - deploying GovernanceToken...");
 
-    log("deploying GovernanceToken...");
-
+    //ERC20 GovernanceToken deployment
     const governanceToken = await deploy("GovernanceToken", {
         from: deployer,
         args: [],
@@ -18,21 +20,27 @@ const deployGovernanceToken: DeployFunction = async function (
         /* waitConfirmations: */
     });
 
-    log(`deployed GovernanceToken to address ${governanceToken.address}`);
+    log(`01 - deployed GovernanceToken to address ${governanceToken.address}`);
     log("----------------------------------------------------");
 
+    //Calling @func delegate to delegate voting power to deployer
     await delegate(governanceToken.address, deployer);
     log("delegated");
     log("----------------------------------------------------");
 };
 
+//Function hands over Voting power 
+//for @param governanceTokenAddress 
+//to @param delegatedAccount
 const delegate = async (
     governanceTokenAddress: string,
     delegatedAccount: string
 ) => {
     const governanceToken = await ethers.getContractAt(
-        "GovernanceToken", governanceTokenAddress
+        "GovernanceToken",
+        governanceTokenAddress
     );
+
     const tx = await governanceToken.delegate(delegatedAccount);
     await tx.wait(1);
     console.log(

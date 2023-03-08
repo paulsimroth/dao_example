@@ -9,8 +9,9 @@ const deployBox: DeployFunction = async function (
     const { deploy, log } = deployments;
     const { deployer } = await getNamedAccounts();
 
-    log("deploying Box...");
+    log("05 - deploying Box...");
 
+    //Box Contract deployment
     const box = await deploy("Box", {
         from: deployer,
         args: [],
@@ -21,7 +22,7 @@ const deployBox: DeployFunction = async function (
     const boxContract = await ethers.getContractAt("Box", box.address);
     const transferOwner = await boxContract.transferOwnership(timeLock.address);
     await transferOwner.wait(1);
-    log("transfer completed");
+    log("05 - transfer completed");
     log("----------------------------------------------------");
 };
 

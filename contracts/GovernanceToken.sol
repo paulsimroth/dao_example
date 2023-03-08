@@ -1,4 +1,4 @@
-//ERC"= Token used in voting
+//ERC20 Token used in voting in DAO
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
