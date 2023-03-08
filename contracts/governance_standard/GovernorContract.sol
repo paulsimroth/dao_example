@@ -14,7 +14,7 @@ contract GovernorContract is Governor, GovernorSettings, GovernorCountingSimple,
     constructor(IVotes _token, TimelockController _timelock, uint256 _votingDelay, uint256 _votingPeriod, uint256 _quorumPercentage)
         Governor("GovernorContract")
         /*
-            Setting voting delay @param _votingDelay and voting period @param _votingPeriod
+        *  Setting voting delay @param _votingDelay and voting period @param _votingPeriod
         */
         GovernorSettings(
             _votingDelay /* 1 block */,
@@ -23,10 +23,12 @@ contract GovernorContract is Governor, GovernorSettings, GovernorCountingSimple,
         )
         GovernorVotes(_token)
         /*
-            Setting minimum voting turnout @param _quorumPercentage
+        *  Setting minimum voting turnout @param _quorumPercentage
         */
         GovernorVotesQuorumFraction(_quorumPercentage)
-        //Time Lock controller
+        /*
+        *   TimeLock Controller 
+        */
         GovernorTimelockControl(_timelock)
     {}
 

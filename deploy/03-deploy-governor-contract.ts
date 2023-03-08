@@ -5,6 +5,7 @@ import { VOTING_DELAY, VOTING_PERIOD, QUORUM_PERCENTAGE } from "../helper-hardha
 const deployGovernorContract: DeployFunction = async function (
     hre: HardhatRuntimeEnvironment
 ) {
+    // @ts-ignore
     const { getNamedAccounts, deployments } = hre;
     const { deploy, log, get } = deployments;
     const { deployer } = await getNamedAccounts();
