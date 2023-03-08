@@ -7,7 +7,7 @@ Here you can find the [Tutorial](https://www.youtube.com/watch?v=AhJtmUqhAqg&t=7
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts)
-- Javascript (React & Testing)
+- TypeScript(Scripts for Delployment and Contract Interactions)
 - [Hardhat](https://hardhat.org/) (Development Framework)
 - [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
 - [ContractsWizard](https://docs.openzeppelin.com/contracts/4.x/wizard) (Openzeppelin Contracts Wizard to create GovernorContract)
