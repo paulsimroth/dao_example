@@ -7,10 +7,12 @@ Here you can find the [Tutorial](https://www.youtube.com/watch?v=AhJtmUqhAqg&t=7
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts)
-- TypeScript(Scripts for Delployment and Contract Interactions)
+- TypeScript (Scripts for Delployment and Contract Interactions)
 - [Hardhat](https://hardhat.org/) (Development Framework)
-- [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
+- [Hardhat-Deploy](https://github.com/wighawag/hardhat-deploy)
 - [ContractsWizard](https://docs.openzeppelin.com/contracts/4.x/wizard) (Openzeppelin Contracts Wizard to create GovernorContract)
+- [OpenZeppelin](https://www.openzeppelin.com/contracts) (Smart Contract Library)
+- [TypeChain](https://github.com/dethcrypto/TypeChain) (Typescript bindings for Ethereum Smart Contracts)
 
 
 ## How it works
