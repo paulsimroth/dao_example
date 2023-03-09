@@ -31,9 +31,9 @@ If you want to clone the repo and use it in your local environment follow these 
 - try proposal script: 
 ```$ npx hardhat run scripts/propose.ts --network localhost```
 - try vote script:
-```npx hardhat run scripts/vote.ts --network localhost```
+```$ npx hardhat run scripts/vote.ts --network localhost```
 - try queueing and executing:
-```npx hardhat run scripts/queue-and-execute.ts --network localhost```
+```$ npx hardhat run scripts/queue-and-execute.ts --network localhost```
 
 ## Disclaimer
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
