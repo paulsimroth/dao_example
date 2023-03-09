@@ -1,6 +1,9 @@
 # DAO Example
 
-This is an example of a DAO I made following a tutorial to get a better insight on how to code a DAO on my own in the future.
+This is an example of a DAO I made following a tutorial to get a better insight on how a DAO could work.
+Here is an example where votes are cast using an ERC20 Token.
+Those votes are processed in the GovernanceContract, which is controlled by the TimeLock contract.
+The outcome is stored in the Box Contract, which is also owned by TimeLock.
 
 Here you can find the [Tutorial](https://www.youtube.com/watch?v=AhJtmUqhAqg&t=738s) I followed.
 
@@ -29,6 +32,8 @@ If you want to clone the repo and use it in your local environment follow these 
 ```$ npx hardhat run scripts/propose.ts --network localhost```
 - try vote script:
 ```npx hardhat run scripts/vote.ts --network localhost```
+- try queueing and executing:
+```npx hardhat run scripts/queue-and-execute.ts --network localhost```
 
 ## Disclaimer
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 

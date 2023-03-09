@@ -40,7 +40,7 @@ export async function propose(args: any[], functionToCall: string, proposalDescr
 
 propose([NEW_STORE_VALUE], FUNC, PROPOSAL_DESCRIPTION)
     .then(() => process.exit(0))
-    .catch((e) => {
-        console.log(e)
+    .catch((error) => {
+        console.log(error)
         process.exit(1);
 });

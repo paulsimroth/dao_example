@@ -1,4 +1,4 @@
-//Owner of Box Contract
+//Owner of Box and GovernanceContract
 //Locking Box for new vote to be executed
 
 // SPDX-License-Identifier: MIT
