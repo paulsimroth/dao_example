@@ -26,14 +26,14 @@ export async function propose(args: any[], functionToCall: string, proposalDescr
     
     const proposeReceipt = await proposeTx.wait(1);
     
-    //Checking if chains "hardhat" or "localhost" to speed up Chain ny @param VOTING_DELAY + 1
+    //Checking if chains "hardhat" or "localhost" to speed up Chain by @param VOTING_DELAY + 1
     if(developmentChains.includes(network.name)) {
         await moveBlocks(VOTING_DELAY + 1);
     };
 
     //Writing @param proposalId to JSON File
     const proposalId = proposeReceipt.events[0].args.proposalId;
-    let proposals = JSON.parse(fs.readFileSync(proposalsFile, "utf-8"));
+    let proposals = JSON.parse(fs.readFileSync(proposalsFile, "utf8"));
     proposals[network.config.chainId!.toString()].push(proposalId.toString());
     fs.writeFileSync(proposalsFile, JSON.stringify(proposals));
 };

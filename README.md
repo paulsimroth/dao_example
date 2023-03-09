@@ -24,8 +24,11 @@ If you want to clone the repo and use it in your local environment follow these 
 ```$ npm install```
 3. start your local hardhat node: 
 ```$ npx hardhat node```
-4. try proposal script: 
+
+- try proposal script: 
 ```$ npx hardhat run scripts/propose.ts --network localhost```
+- try vote script:
+```npx hardhat run scripts/vote.ts --network localhost```
 
 ## Disclaimer
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
