@@ -1,7 +1,7 @@
 # DAO Example
 
 This is an example of a DAO I made following a tutorial to get a better insight on how a DAO could work.
-Here is an example where votes are cast using an ERC20 Token.
+In this example votes are cast using an ERC20 Token.
 Those votes are processed in the GovernanceContract, which is controlled by the TimeLock contract.
 The outcome is stored in the Box Contract, which is also owned by TimeLock.
 
